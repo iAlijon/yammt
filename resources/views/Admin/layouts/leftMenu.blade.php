@@ -21,6 +21,8 @@
                 <li class="nav-item">
                     <a href="{{route('news.index')}}" class="nav-link {{(request()->is('news*')) ? 'active' : ''}}">
                         <i class="fas fa-file nav-icon"></i>
+
+
                         Yangiliklar
                     </a>
                 </li>

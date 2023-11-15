@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\MenuItemRequest;
 use App\Models\MenuItem;
 use App\Repositories\MenuItemRepository;
 use Illuminate\Http\Request;
@@ -45,9 +46,13 @@ class MenuItemController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(MenuItemRequest $request)
     {
-        //
+        $result = $this->repo->create($request->validated());
+        if ($result)
+            return redirect()->route('menu-item.index')->with('success', 'Success');
+            else
+                return back()->with(['errors'=>'Errors']);
     }
 
     /**
@@ -61,7 +66,7 @@ class MenuItemController extends Controller
         //
     }
 
-    /**
+    /**а
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -69,7 +74,11 @@ class MenuItemController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = [
+            'categories' => $this->repo->MenuCategory(),
+            'model' => $this->repo->model->find($id)
+        ];
+        return view('admin.menu-item.edit', compact('data'));
     }
 
     /**
@@ -79,19 +88,25 @@ class MenuItemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(MenuItemRequest $request, $id)
     {
-        //
+        $result = $this->repo->update($request->validated(), $id);
+        if ($result)
+            return redirect()->route('menu-item.index')->with('success', 'Success');
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified resource from storage./
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        //
+        $result = $this->repo->model->find($id)->delete();
+        if ($result)
+            return redirect()->route('menu.index')->with('success', 'Success menu item delete');
+            else
+                return back()->with('errors', 'Errors menu item delete');
     }
 }

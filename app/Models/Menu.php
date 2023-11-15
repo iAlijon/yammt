@@ -17,4 +17,9 @@ class Menu extends Model
     protected $casts = [
         'title' => 'array'
     ];
+
+    public function category()
+    {
+        return $this->hasOne('App\Models\MenuItem', 'category_id', 'id');
+    }
 }

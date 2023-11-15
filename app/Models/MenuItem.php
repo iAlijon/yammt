@@ -8,8 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class MenuItem extends Model
 {
     use HasFactory;
-    protected $guarded = ['*'];
+    protected $fillable = ['title', 'menu_id', 'status'];
+
     protected $casts = [
         'title' => 'array'
     ];
+
+    public function category(){
+        return $this->belongsTo(Menu::class);
+    }
 }

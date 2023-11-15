@@ -3,7 +3,7 @@
 @section('content')
     <div class="content-header">
         <div class="container-fluid">
-            <h4>MenuItem Qo'shish</h4>
+            <h4>MenuItem Qo'shish #{{$data['model']['id']}}</h4>
         </div>
     </div>
     <div class="content">
@@ -38,7 +38,7 @@
                                 <div class="tab-pane fade show active" id="custom-tabs-three-home" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
                                     <div class="form-group">
                                         <label for="title_oz">Sarlavha</label>
-                                        <input type="text" name="title_oz" class="form-control {{$errors->has('title_oz')?'is-invalid':''}}" placeholder="title">
+                                        <input type="text" name="title_oz" class="form-control {{$errors->has('title_oz')?'is-invalid':''}}" placeholder="title" value="{{$data['model']['title']['oz']}}">
                                         <div class="text-danger">{{$errors->first('title_oz')}}</div>
                                     </div>
                                 </div>
@@ -46,7 +46,7 @@
                                 <div class="tab-pane fade" id="custom-tabs-three-profile" role="tabpanel" aria-labelledby="custom-tabs-three-profile-tab">
                                     <div class="form-group">
                                         <label for="title_uz">Sarlavha</label>
-                                        <input type="text" name="title_uz" class="form-control {{$errors->has('title_uz')?'is-invalid':''}}" placeholder="title">
+                                        <input type="text" name="title_uz" class="form-control {{$errors->has('title_uz')?'is-invalid':''}}" placeholder="title"  value="{{$data['model']['title']['uz']}}">
                                         <div class="text-danger">{{$errors->first('title_uz')}}</div>
                                     </div>
                                 </div>
@@ -68,5 +68,6 @@
                 </form>
             </div>
         </div>
+    </div>
     </div>
 @endsection
