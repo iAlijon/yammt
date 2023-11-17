@@ -3,7 +3,9 @@
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\MenuItemController;
 use App\Http\Controllers\Admin\NewsController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use Lunaweb\Localization\Facades\Localization;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +20,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('login', [\App\Http\Controllers\AuthController::class, 'showLoginForm'])->name('login');
 Route::post('login', [\App\Http\Controllers\AuthController::class, 'login']);
+
+Localization::localizedRoutesGroup(function() {
+    Route::get('/', [HomeController::class, 'index'])->name('home');
+});
 
 Route::middleware(['auth:web'])->group(function (){
     Route::group(['prefix' => 'admin'], function (){

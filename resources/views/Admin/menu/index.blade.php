@@ -127,7 +127,7 @@
                             }
                             toastr.error(['error','Error delete menu'],function (){
                                 setTimeout(function (){
-                                    location.href = "{{back()}}"
+                                    location.href = "#"
                                 }, 4000)
                             })
                         }

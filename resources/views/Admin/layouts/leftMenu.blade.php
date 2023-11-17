@@ -12,27 +12,28 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
-                <li class="nav-item menu-open">
+                <li class="nav-item">
                     <a href="/admin" class="nav-link {{(request()->is('/admin')) ? 'active' : ''}}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>Bosh sahifa</p>
                     </a>
                 </li>
+
                 <li class="nav-item">
                     <a href="{{route('news.index')}}" class="nav-link {{(request()->is('news*')) ? 'active' : ''}}">
                         <i class="fas fa-file nav-icon"></i>
-
-
                         Yangiliklar
                     </a>
                 </li>
-                <li>
+
+                <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="fas fa-file"></i>
+{{--                        <i class="nav-icon fa fa-solid  fa-bars"></i>--}}
+                        <i class="nav-icon fas fa-copy"></i>
                         <p>
                             Menu
-                            <i class="fas fa-angle-left right"></i>
                         </p>
+                        <i class="fas fa-angle-left right"></i>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
