@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {{--    <link rel="shortcut icon" type="image/x-icon" href="resources/img/favicon.ico">--}}
-    {{--    <link rel="icon" href="img/favicon.ico" type="image/x-icon">--}}
-
-    <link rel="stylesheet" href="{{ asset('/front/css/flaticon.css') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('/admin-assets/img/favicon.ico')}}">
+    <link rel="icon" href="{{asset('/admin-assets/img/favicon.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" href="">
     <link rel="stylesheet" href="{{asset('/front/css/libs.min.css')}}">
     <link rel="stylesheet" href="{{asset('/front/css/style.min.css')}}">
     <title>Yagona Milliy Mehnat Tizimi</title>

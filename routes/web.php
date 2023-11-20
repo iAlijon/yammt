@@ -23,6 +23,7 @@ Route::post('login', [\App\Http\Controllers\AuthController::class, 'login']);
 
 Localization::localizedRoutesGroup(function() {
     Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::get('/menu', [\App\Http\Controllers\MenuController::class, 'index'])->name('menu');
 });
 
 Route::middleware(['auth:web'])->group(function (){

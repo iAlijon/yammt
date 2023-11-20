@@ -10,7 +10,7 @@
                         <div class="swiper-slide">
                             <div class="slide__box">
                                 <div class="slide__img">
-                                    <picture><source srcset="img/employer/icon-employer-1.svg" type="image/webp"><img src="img/employer/icon-employer-1.svg" alt="Icon"></picture>
+                                    <picture><source srcset="{{asset('/admin-assets/img/employer/icon-employer-1.svg')}}" type="image/webp"><img src="{{asset('/admin-assets/img/employer/icon-employer-1.svg')}}" alt="Icon"></picture>
                                 </div>
                                 <p>Har bir ish beruvchi shahsiy kabinetiga ega (kirish ERI kaliti orqali amalga oshiriladi);</p>
                             </div>
@@ -18,7 +18,7 @@
                         <div class="swiper-slide">
                             <div class="slide__box">
                                 <div class="slide__img">
-                                    <picture><source srcset="img/employer/icon-employer-2.svg" type="image/webp"><img src="img/employer/icon-employer-2.svg" alt="Icon"></picture>
+                                    <picture><source srcset="{{asset('/admin-assets/img/employer/icon-employer-2.svg')}}" type="image/webp"><img src="{{asset('/admin-assets/img/employer/icon-employer-2.svg')}}" alt="Icon"></picture>
                                 </div>
                                 <p>Shtatlar jadvaliga (tashkilot tuzilmasi) asosan bo‘lim hamda ish o‘rinlarini shakllantirish;</p>
                             </div>
@@ -26,7 +26,7 @@
                         <div class="swiper-slide">
                             <div class="slide__box">
                                 <div class="slide__img">
-                                    <picture><source srcset="img/employer/icon-employer-3.svg" type="image/webp"><img src="img/employer/icon-employer-3.svg" alt="Icon"></picture>
+                                    <picture><source srcset="{{asset('/admin-assets/img/employer/icon-employer-3.svg')}}" type="image/webp"><img src="{{asset('/admin-assets/img/employer/icon-employer-3.svg')}}" alt="Icon"></picture>
                                 </div>
                                 <p>Mehnat shartnomasi, unga kiritilgan o‘zgartirishlar hamda shartnoma bekor qilinishini elektron ro‘yxatdan o‘tkazish;</p>
                             </div>
@@ -34,7 +34,7 @@
                         <div class="swiper-slide">
                             <div class="slide__box">
                                 <div class="slide__img">
-                                    <picture><source srcset="img/employer/icon-employer-2.svg" type="image/webp"><img src="img/employer/icon-employer-2.svg" alt="Icon"></picture>
+                                    <picture><source srcset="{{asset('/admin-assets/img/employer/icon-employer-2.svg')}}" type="image/webp"><img src="{{asset('/admin-assets/img/employer/icon-employer-2.svg')}}" alt="Icon"></picture>
                                 </div>
                                 <p>Mehnat shartnomasi, unga kiritilgan o‘zgartirishlar hamda shartnoma bekor qilinishini elektron ro‘yxatdan o‘tkazish;</p>
                             </div>
@@ -42,7 +42,7 @@
                         <div class="swiper-slide">
                             <div class="slide__box">
                                 <div class="slide__img">
-                                    <picture><source srcset="img/employer/icon-employer-1.svg" type="image/webp"><img src="img/employer/icon-employer-1.svg" alt="Icon"></picture>
+                                    <picture><source srcset="{{asset('/admin-assets/img/employer/icon-employer-1.svg')}}" type="image/webp"><img src="{{asset('/admin-assets/img/employer/icon-employer-1.svg')}}" alt="Icon"></picture>
                                 </div>
                                 <p>Har bir ish beruvchi shahsiy kabinetiga ega (kirish ERI kaliti orqali amalga oshiriladi);</p>
                             </div>
@@ -54,4 +54,5 @@
             </div>
         </div>
     </div>
-</section>
+</section>{{asset('/admin-assets/
+')}}

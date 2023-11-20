@@ -8,7 +8,7 @@
             </div>
             <div class="header__bottom">
                 <a class="header__logo logo-header" href="index.html">
-                    <picture><source srcset="img/header/header-logo.svg" type="image/webp"><img src="img/header/header-logo.svg" alt="Logo"></picture>
+                    <picture><source srcset="{{asset('/admin-assets/img/header/header-logo.svg')}}" type="image/webp"><img src="{{asset('/admin-assets/img/header/header-logo.svg')}}" alt="Logo"></picture>
                     <h2>
                         <strong>Yagona milliy mehnat tizimi</strong> idoralararo dasturiy-apparat kompleksini boshqarish direksiyasi
                     </h2>
@@ -18,7 +18,7 @@
                         <ul class="menu-header__list">
                             <li class="menu-header__dropdown _icon-arrow-down">
                                 <a class="menu-header__link" href="">Direksiya</a>
-                                <picture><source srcset="img/header/icon-arrow.svg" type="image/webp"><img class="menu-header__icon" src="img/header/icon-arrow.svg" alt="Icon" data-dropdown></picture>
+                                <picture><source srcset="{{asset('/admin-assets/img/header/icon-arrow.svg')}}" type="image/webp"><img class="menu-header__icon" src="{{asset('/admin-assets/img/header/icon-arrow.svg')}}" alt="Icon" data-dropdown></picture>
                                 <ul class="_dropdown">
                                     <li><a href="">Biz haqimizda</a></li>
                                     <li><a href="">Rahbariyat</a></li>
@@ -28,7 +28,7 @@
                             </li>
                             <li class="menu-header__dropdown _icon-arrow-down">
                                 <a class="menu-header__link" href="">Axborot xizmati</a>
-                                <picture><source srcset="img/header/icon-arrow.svg" type="image/webp"><img class="menu-header__icon" src="img/header/icon-arrow.svg" alt="Icon" data-dropdown></picture>
+                                <picture><source srcset="{{asset('/admin-assets/img/header/icon-arrow.svg')}}" type="image/webp"><img class="menu-header__icon" src="{{asset('/admin-assets/img/header/icon-arrow.svg')}}" alt="Icon" data-dropdown></picture>
                                 <ul class="_dropdown">
                                     <li><a href="">Yangiliklar</a></li>
                                     <li><a href="">Media</a></li>
@@ -36,7 +36,7 @@
                             </li>
                             <li  class="menu-header__dropdown _icon-arrow-down">
                                 <a class="menu-header__link" href="">Ochiq ma’lumotlar</a>
-                                <picture><source srcset="img/header/icon-arrow.svg" type="image/webp"><img class="menu-header__icon" src="img/header/icon-arrow.svg" alt="Icon" data-dropdown></picture>
+                                <picture><source srcset="{{asset('/admin-assets/img/header/icon-arrow.svg')}}" type="image/webp"><img class="menu-header__icon" src="{{asset('/admin-assets/img/header/icon-arrow.svg')}}" alt="Icon" data-dropdown></picture>
                                 <ul class="_dropdown">
                                     <li><a href="">Statistik ma’lumotlar</a></li>
                                     <li><a href="">Infografikalar</a></li>
