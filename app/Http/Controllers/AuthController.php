@@ -23,7 +23,7 @@ class AuthController extends Controller
             $credentials = request(['name', 'password']);
             if( Auth::guard('web')->attempt($credentials) ){
                 $user = Auth::guard('web')->user();
-                
+
                 if ($user->roles->pluck('name')) {
                     Auth::shouldUse('web');
                     return redirect()->route('dashboard');
@@ -34,5 +34,11 @@ class AuthController extends Controller
             } else {
                 return redirect()->back()->withErrors(['status' => 'Login yoki parolni kiritishda xatolik!']);
             }
-        }
+    }
+
+    public function logout()
+    {
+         Auth::guard('web')->logout();
+         return redirect()->route('home');
+    }
 }

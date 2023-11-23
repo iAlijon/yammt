@@ -5,7 +5,7 @@ namespace App\Repositories;
 use App\Models\Menu;
 use App\Models\MenuItem;
 
-class MenuItemRepository
+class MenuItemRepository extends BaseRepository
 {
     public function __construct()
     {

@@ -23,12 +23,14 @@ Route::post('login', [\App\Http\Controllers\AuthController::class, 'login']);
 
 Localization::localizedRoutesGroup(function() {
     Route::get('/', [HomeController::class, 'index'])->name('home');
-    Route::get('/menu', [\App\Http\Controllers\MenuController::class, 'index'])->name('menu');
+    Route::get('page/{id}', [\App\Http\Controllers\MenuController::class, 'show'])->name('page.show');
+    Route::get('news/{id}', [NewsController::class, 'show'])->name('news');
 });
 
 Route::middleware(['auth:web'])->group(function (){
     Route::group(['prefix' => 'admin'], function (){
         Route::get('/', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
+        Route::get('logout', [\App\Http\Controllers\AuthController::class, 'logout'])->name('logout');
         Route::resources([
             'menu' => MenuController::class,
             'news' => NewsController::class,

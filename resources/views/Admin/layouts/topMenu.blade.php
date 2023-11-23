@@ -13,7 +13,7 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-            <a href="">
+            <a href="{{route('logout')}}">
                 <i class="fa fa-sign-out-alt"></i>
                 Chiqish
             </a>

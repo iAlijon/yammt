@@ -54,9 +54,9 @@
                                 <div class="form-group">
                                     <label for="status">Status</label>
                                     <select name="status" id="status" class="form-control">
-                                        <option value="1">Опубликовано</option>
-                                        <option value="2">Черновик</option>
-                                        <option value="3">Не активен</option>
+                                        @foreach($data['status'] as $status)
+                                            <option value="{{$status->id}}">{{$status->title}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="text-right">

@@ -31,7 +31,13 @@
                             <tr>
                                 <td>{{++$k}}</td>
                                 <td>{{$item->title['oz']}}</td>
-                                <td></td>
+                                @if($item->status == 1)
+                                    <td>Опубликовано</td>
+                                @elseif($item->status == 2)
+                                    <td>Черновик</td>
+                                @else
+                                    <td>Не активен</td>
+                                @endif
                                 <td>{{$item->created_at}}</td>
                                 <td>
                                     <a href="{{route('menu-item.edit', $item->id)}}"><i class="fas fa-edit"></i></a>

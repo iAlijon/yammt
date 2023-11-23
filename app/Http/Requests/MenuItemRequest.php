@@ -26,7 +26,7 @@ class MenuItemRequest extends FormRequest
         return [
             'title_oz' => 'required|string',
             'title_uz' => 'required|string',
-            'menu_id' => 'required|exists:menu_id',
+            'menu_id' => 'required|',
             'status' => 'required'
         ];
     }

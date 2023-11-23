@@ -35,7 +35,8 @@ class MenuItemController extends Controller
     public function create()
     {
         $data = [
-            'categories' => $this->repo->MenuCategory()
+            'categories' => $this->repo->MenuCategory(),
+            'status' => $this->repo->status()
         ];
         return view('admin.menu-item.create', compact('data'));
     }

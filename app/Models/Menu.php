@@ -18,8 +18,8 @@ class Menu extends Model
         'title' => 'array'
     ];
 
-    public function category()
+    public function menu()
     {
-        return $this->hasOne('App\Models\MenuItem', 'category_id', 'id');
+        return $this->hasMany('App\Models\MenuItem', 'menu_id', 'id');
     }
 }

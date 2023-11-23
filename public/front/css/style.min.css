@@ -110,6 +110,12 @@ body._lock {
     overflow: hidden
 }
 
+.card {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border-radius: 0px;
+    padding: 20px;
+}
+
 ._wrapper {
     display: -webkit-box;
     display: -ms-flexbox;

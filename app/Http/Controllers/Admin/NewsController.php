@@ -36,7 +36,10 @@ class NewsController extends Controller
      */
     public function create()
     {
-        return view('admin.news.create');
+        $data = [
+            'categories' => $this->repo->category()
+        ];
+        return view('admin.news.create', ['data' => $data]);
     }
 
     /**

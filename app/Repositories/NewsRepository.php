@@ -3,18 +3,27 @@
 namespace App\Repositories;
 
 use App\Http\Controllers\FileController;
+use App\Models\MenuItem;
 use App\Models\News;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use MediaUploader;
 
-class NewsRepository
+class NewsRepository extends BaseRepository
 {
     public $media = null;
+
+
 
     public function __construct()
     {
         $this->model = new News();
+    }
+
+    public function category()
+    {
+        $result = MenuItem::where('menu_id', 8)->get();
+        return $result;
     }
 
     public function create($data)
@@ -39,7 +48,8 @@ class NewsRepository
             'description' => $description,
             'content' => $content,
             'status' => $data['status'],
-            'date' => $data['date']
+            'date' => $data['date'],
+            'category_id' => $data['category_id']
         ]);
         if (isset($data['image'])){
             $this->logoUpload($data['image'], $item);

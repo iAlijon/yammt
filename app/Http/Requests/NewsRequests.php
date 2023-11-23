@@ -32,7 +32,8 @@ class NewsRequests extends FormRequest
             'content_uz' => 'nullable|string',
             'image' => 'nullable|image|max:2048',
             'date' => 'required',
-            'status' => 'required'
+            'status' => 'required',
+            'category_id' => 'required'
         ];
     }
 

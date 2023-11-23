@@ -11,6 +11,11 @@ class MenuRepository
         $this->model = new Menu();
     }
 
+    public function findById($id)
+    {
+        return $this->model->find($id);
+    }
+
     public function create($data)
     {
         $title = [

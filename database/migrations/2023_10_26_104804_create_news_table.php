@@ -21,6 +21,7 @@ class CreateNewsTable extends Migration
             $table->jsonb('content');
             $table->smallInteger('status')->default(1);
             $table->string('date');
+            $table->integer('category_id');
             $table->timestamps();
         });
     }

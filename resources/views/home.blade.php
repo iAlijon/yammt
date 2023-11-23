@@ -2,18 +2,18 @@
 
 @section('content')
     <main>
-    @include('layouts.head')
+    @include('head')
     <!-- system -->
-    @include('layouts.system')
+    @include('system')
     <!-- employer -->
-    @include('layouts.slide_employer')
+    @include('slide_employer')
     <!-- worker -->
-    @include('layouts.slide_worker')
+    @include('slide_worker')
     <!-- statistics -->
-    @include('layouts.statistics')
+    @include('statistics')
     <!-- person -->
-    @include('layouts.person')
+    @include('person')
     <!-- base -->
-    @include('layouts.base')
+    @include('base')
     </main>
 @endsection

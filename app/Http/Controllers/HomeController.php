@@ -2,10 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\HomeRepository;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    protected $repo;
+    public function __construct(HomeRepository $repo)
+    {
+        $this->repo = $repo;
+    }
+
     /**
      * Display a listing of the resource.
      *
