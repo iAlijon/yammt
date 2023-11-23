@@ -2,12 +2,10 @@
 
 @section('content')
         <div class="container">
-            <div class="col-12 col-sm-12">
-                <div class="container-fluid">
-                    <div class="card">
-                        <div class="card-body">
+            <div class="contentBlock">
+                <div class="col-12 col-sm-12">
+                    <div class="container-fluid">
 
-                        </div>
                     </div>
                 </div>
             </div>
